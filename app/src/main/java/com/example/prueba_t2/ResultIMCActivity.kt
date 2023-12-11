@@ -86,7 +86,7 @@ class ResultIMCActivity : AppCompatActivity() {
             else -> {
                 tvTipoPeso.text = String.format("Obesidad")
                 if (sexo == Constantes.valMujer) {
-                    tvMensaje.text = String.format("Estás gordito \n Tienes que adelgazar!!!")
+                    tvMensaje.text = String.format("Estás gordita \n Tienes que adelgazar!!!")
                 } else {
                     tvMensaje.text = String.format("Estás gordito \n Tienes que adelgazar!!!")
                 }
