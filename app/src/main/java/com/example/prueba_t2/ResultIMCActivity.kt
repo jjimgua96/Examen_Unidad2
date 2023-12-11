@@ -2,11 +2,14 @@ package com.example.prueba_t2
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.widget.Button
 import android.widget.TextView
+import androidx.activity.OnBackPressedCallback
 
 class ResultIMCActivity : AppCompatActivity() {
 
     private lateinit var tvIMC: TextView
+    private lateinit var butRecalcular: Button
     private var sexo: Int = 0
     private var altura: Int = 0
     private var peso: Int = 0
@@ -22,6 +25,7 @@ class ResultIMCActivity : AppCompatActivity() {
 
     private fun setVariables() {
         tvIMC = findViewById(R.id.tvIMC)
+        butRecalcular = findViewById(R.id.butRecalcular)
         sexo = intent.extras?.getInt("EXTRA_SEXO") ?: 0
         altura = intent.extras?.getInt("EXTRA_ALTURA") ?: 0
         peso = intent.extras?.getInt("EXTRA_PESO") ?: 0
@@ -30,14 +34,11 @@ class ResultIMCActivity : AppCompatActivity() {
     }
 
     private fun setActions() {
-        if (altura == 0) {
-            tvIMC.text = String.format("La altura no puede ser 0 cm")
-        }
-        if (peso == 0) {
-            tvIMC.text = String.format("El peso no puede ser de 0 kg")
-        } else {
-            val resultado = calcularIMC()
-            tvIMC.text = String.format("%.2f", resultado)
+        val resultado = calcularIMC()
+        tvIMC.text = String.format("%.2f", resultado)
+
+        butRecalcular.setOnClickListener {
+            super.onBackPressed()
         }
     }
 

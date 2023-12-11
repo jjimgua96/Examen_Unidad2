@@ -80,7 +80,7 @@ class MainActivity : AppCompatActivity() {
         }
 
         butPesoMinus.setOnClickListener {
-            if (peso > 0) {
+            if (peso > 1) {
                 peso--
             }
             tvPeso.text = peso.toString()
@@ -92,7 +92,7 @@ class MainActivity : AppCompatActivity() {
         }
 
         butEdadMinus.setOnClickListener {
-            if (edad > 0) {
+            if (edad > 1) {
                 edad--
             }
             tvEdad.text = edad.toString()
