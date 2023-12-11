@@ -1,0 +1,14 @@
+<resources>
+    <string name="app_name">Actividades_01</string>
+    <string name="hombre">hombre</string>
+    <string name="mujer">mujer</string>
+    <string name="altura">altura</string>
+    <string name="peso">peso</string>
+    <string name="edad">edad</string>
+    <string name="calcular">calcular</string>
+    <string name="alturaInicial">0 cm</string>
+    <string name="valor_cero">0</string>
+    <string name="complexi_n">complexión</string>
+    <string name="tu_resultado">Tu resultado</string>
+    <string name="re_calcular">Re-calcular</string>
+</resources>
